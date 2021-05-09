@@ -1,11 +1,8 @@
-# First Name Last Name
-# StudentID
-# Department
 
 
 from random import randrange
 
-
+# QUESTION: 1
 def merge_two_strings(s1: str, s2: str):
     string2 = s2[::-1]
     if len(s1) != len(string2):
@@ -18,6 +15,7 @@ def merge_two_strings(s1: str, s2: str):
         print(f"Result={result}")
 
 
+# QUESTION: 2        
 def decode(s: str):
     if s[0].isdigit():
         print("The String can not have Digit as first letter")
@@ -33,6 +31,7 @@ def decode(s: str):
         print(f"Result: {result}")
 
 
+# QUESTION: 3        
 def countTypes(s1: str):
     uppercase, lowercase, digits, special = 0, 0, 0, 0
     for i in range(len(s1)):
@@ -50,6 +49,7 @@ def countTypes(s1: str):
     print(f"Symbol={special}")
 
 
+# QUESTION: 4    
 def lottery():
     randints = []
     userinpint = []
