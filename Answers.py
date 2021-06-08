@@ -74,3 +74,37 @@ def lottery():
     print(f"Winning numbers are: {randints}")
     print(f"Your numbers are: {userinpint}")
     print(f"Congrats, you guessed {counter} number correctly.")
+    
+
+# QUESTION 5 Read Text File and output digits    
+def find_numbers(file_name: str):
+    """
+    Here we initialize a variable called counter, initialized at top to make this a global variable inside the function
+    """
+    counter = 0
+    # This creates an opened instance of the file
+    with open(file_name) as f:
+    # readlines() is a built in method to read content 1 by 1 line wise
+        content = f.readlines()
+    """ 
+    since text files have ascii characters and utf-8 encoding a space in the document will be depicted as  
+    "/n" but we dont want that. another python method strip() exists this removes any whitespace or "/n"
+    from a string of characters.
+    """   
+    content = [x.strip() for x in content] 
+    """
+        since content variable will be storing all the content in a list we can loop through the list
+        isdigit() is another python function that checks if you guessed it a string is a digit it returns
+        true or false on conditions. those true or false states have been stored in chk variable
+        so we can use if statements
+        if the element in the list is a digit we add one to the counter 
+        counter+=1 is the same as counter= counter+1
+        otherwise if it is not a digit we do nothing
+        in the end we pring the counter
+    """
+    for li in content:
+        chk = li.isdigit()
+        if chk:
+            counter+=1
+    print(counter)    
+            
