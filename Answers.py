@@ -108,3 +108,18 @@ def find_numbers(file_name: str):
             counter+=1
     print(counter)    
             
+# Question 6 find frequency of each word in a string
+def create_frequency(mystring:str):
+  
+    mystring = mystring.split()         
+    str2 = []
+  
+    for i in mystring:             
+  
+
+        if i not in str2:
+
+            str2.append(i) 
+              
+    for i in range(0, len(str2)):
+        print(f'{str2[i]}:{mystring.count(str2[i])}')
